@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Roboto/roboto-v20-latin-300.eot");
+  src: local("Roboto Light"), local("Roboto-Light"),
+    url("../fonts/Roboto/roboto-v20-latin-300.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto/roboto-v20-latin-300.woff2") format("woff2"),
+    url("../fonts/Roboto/roboto-v20-latin-300.woff") format("woff"),
+    url("../fonts/Roboto/roboto-v20-latin-300.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v14-latin-regular.eot");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("../fonts/Montserrat/montserrat-v14-latin-regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Montserrat/montserrat-v14-latin-regular.woff2") format("woff2"),
+    url("../fonts/Montserrat/montserrat-v14-latin-regular.woff") format("woff"),
+    url("../fonts/Montserrat/montserrat-v14-latin-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/montserrat-v14-latin-700.eot");
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("../fonts/Montserrat/montserrat-v14-latin-700.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Montserrat/montserrat-v14-latin-700.woff2") format("woff2"),
+    url("../fonts/Montserrat/montserrat-v14-latin-700.woff") format("woff"),
+    url("../fonts/Montserrat/montserrat-v14-latin-700.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 144rem;
+  width: 100%;
+  margin: auto;
+}
+
+.main__about-size {
+  max-width: 30rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.5rem;
+  height: 40rem;
+}
+
+.blocks-pre-header {
+  @include monserat-normal;
+  width: 7.2rem;
+  background: $second-color;
+  border-radius: 4rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.2rem;
+  color: $main-color;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2.3rem;
+}
+
+.blocks-text {
+  @include roboto-normal;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #e3e3e3;
+}
+
+.blocks-header {
+  @include monserat-bold;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  color: $main-color;
+  margin-bottom: 2.3rem;
+}
+
+.user-blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22.1rem;
+
+  .blocks-img {
+    margin-bottom: 1rem;
+    position: relative;
+    img {
+      border-radius: 50%;
+    }
+
+    .img-icon {
+      width: 3.4rem;
+      height: 3.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 0.2rem solid $main-color;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .blocks-name {
+    @include monserat-bold;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-align: center;
+    color: $text-color;
+    margin-bottom: 1.2rem;
+  }
+
+  .blocks-desc {
+    @include roboto-normal;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #666666;
+  }
+}
+
+.block-size {
+  @include monserat-bold;
+  max-width: 30rem;
+  width: 32%;
+  height: 31rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+  text-align: center;
+  line-height: 31rem;
+}
